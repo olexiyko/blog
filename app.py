@@ -18,9 +18,24 @@ class Article(db.Model):
         return '<Article %r>' % self.id
 
 
+from sqlalchemy import desc
+
+# @app.route('/')
+# def main():
+#     articles = Article.query.order_by(desc(Article.date)).limit(4).all()
+#     article1 = articles[0] if len(articles) > 0 else None
+#     article2 = articles[1] if len(articles) > 1 else None
+#     article3 = articles[2] if len(articles) > 2 else None
+#     article4 = articles[3] if len(articles) > 3 else None
+#     return render_template("main.html", article1=article1, article2=article2,article3=article3,article4=article4)
+@app.route('/')
+def main():
+    articles=Article.query.order_by(Article.date.desc()).all()
+    return render_template("main.html", articles=articles)
+
 
 @app.route('/pricing')
-def index():
+def pricing():
     return render_template("index.html")
 
 @app.route('/about')
