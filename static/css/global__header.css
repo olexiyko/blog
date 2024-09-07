@@ -1,0 +1,14 @@
+.global__header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.d-flex {
+  padding: 10px 20px;
+}
+.p-2 {
+  padding: 0 20px !important;
+  text-decoration: none;
+}
+.p-2:hover {
+  text-decoration: underline;
+}

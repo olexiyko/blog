@@ -1,0 +1,14 @@
+.pricing__main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button:hover .registration__link {
+  color: white;
+}
+
+.table-responsive {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px gray;
+  background-color: white !important;
+}

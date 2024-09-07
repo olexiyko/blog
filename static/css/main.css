@@ -1,0 +1,13 @@
+@import "global__header.css";
+@import "index.css";
+@import "pricing.css";
+@import "posts.css";
+@import "about.css";
+@import "global__footer.css";
+
+html {
+  overflow-y: scroll;
+}
+body {
+  background-color: blanchedalmond;
+}
