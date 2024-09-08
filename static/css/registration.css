@@ -1,0 +1,17 @@
+.registration__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.registration__container .row .col {
+  background-color: blanchedalmond !important;
+  margin-bottom: 16px;
+}
+.name_label {
+  margin-bottom: 8px;
+}
+/* .registration__container .btn,
+.registration__container .form-check {
+  float: right;
+} */

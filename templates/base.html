@@ -52,7 +52,15 @@
           <a class="p-2 text-dark" href="/pricing">Pricing</a>
         </nav>
         <a class="p-2 text-dark" href="/posts">Posts</a>
+        <a href="/login">Sign In</a>
+        <a href="/registration">Sign Up</a>
+        <a href="/logout">Logout</a>
         <a class="btn btn-warning" href="/create-article">Write article</a>
+        {% if session.user_id %}
+        <p>Вітаємо, {{ session.user_name }}!</p>
+    {% else %}
+        <p>Ви не залогінені</p>
+    {% endif %}
       </div>
     </div>
     {% block body %} {% endblock %}
