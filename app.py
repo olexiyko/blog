@@ -165,14 +165,20 @@ def login():
         if user:
             session["user_id"] = user.id
             session["user_name"] = user.first_name
+            session["user_last_name"] = user.last_name
+            session["user_email"] = user.email
+            session["user_address"] = user.address1
+            session["user_city"] = user.city
+            session["user_state"] = user.state
+            session["user_zip"] = user.zip
             return redirect("/")
 
         return (
             "Invalid credentials",
             401,
-        ) 
+        )
 
-    return render_template("login.html") 
+    return render_template("login.html")
 
 
 @app.route("/logout")
@@ -189,6 +195,11 @@ def success():
 
     users = User.query.all()
     return render_template("success.html", users=users)
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 @import "global__header.css";
 @import "index.css";
 @import "pricing.css";
@@ -5,6 +6,8 @@
 @import "about.css";
 @import "registration.css";
 @import "success.css";
+@import "login.css";
+@import "profile.css";
 @import "global__footer.css";
 
 html {
@@ -19,4 +22,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --font-family-Saira: "Saira", sans-serif;
 }

@@ -1,0 +1,35 @@
+.profile__container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px 50px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px gainsboro;
+}
+.profile__container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.change-passsword-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingPassword {
+  width: 300px;
+  height: 30px !important;
+}
+.profile__change-password-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

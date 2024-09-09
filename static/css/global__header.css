@@ -1,4 +1,5 @@
-.global__header {
+.global__header__loggedIn,
+.global__header__loggedOut {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -11,4 +12,28 @@
 }
 .p-2:hover {
   text-decoration: underline;
+}
+.profile__link {
+  text-decoration: none;
+  color: black;
+}
+.profile__link :hover {
+  text-decoration: underline;
+  color: black;
+}
+.logged_in_status {
+  text-decoration: none;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-family-Saira) !important;
+}
+.logged_in_status :hover {
+  text-decoration: underline;
+}
+.global__header__loggedIn .btn,
+.global__header__loggedOut .btn {
+  padding: 5px 20px;
+  margin: 0 10px;
 }

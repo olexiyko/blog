@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %}My profile{% endblock %} {% block
+body %}
+<div class="profile__container">
+  <h2>Your profile</h2>
+  {% if session.get('user_id') %}
+  <p>Hello, {{ session.get('user_name') }}!</p>
+  <p>
+    Full name: {{ session.get('user_name') }} {{ session.get('user_last_name')
+    }}
+  </p>
+  <p>Email: {{ session.get('user_email') }}</p>
+  <p>Address: {{ session.get('user_address') }}</p>
+  <p>City: {{ session.get('user_city') }}</p>
+  <p>State: {{ session.get('user_state') }}</p>
+  <p>ZIP Code: {{ session.get('user_zip') }}</p>
+  <div class="change-passsword-btn-container">
+    <a class="btn btn-secondary" id="change-password-btn">Change password</a>
+  </div>
+  <div class="profile__container-forChangingPassword"></div>
+  {% else %}
+  <p>You are not logged in.</p>
+  {% endif %}
+</div>
+{% endblock %}
+
+
