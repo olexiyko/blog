@@ -33,3 +33,70 @@
   justify-content: center;
   align-items: center;
 }
+.return-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.change-password-btn-container {
+  margin-top: 10px;
+}
+#change-btn {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.buttons_for_changing_password-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#return-btn {
+  display: flex;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.form-floating > .form-control {
+  min-height: 0;
+  height: 30px;
+}
+.form-control {
+  text-align: center;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  top: -0.75rem;
+  left: 0;
+  font-size: 75%;
+  color: #007bff;
+}
+.old_password_placeholder,
+.new_password_placeholder {
+  font-weight: 500;
+}
+.old_password_placeholder {
+  margin-top: 10px;
+}
+.old_password-container,
+new_password-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.old_password-container p,
+.old_password-container p {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5px;
+}

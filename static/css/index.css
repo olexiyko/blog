@@ -8,6 +8,9 @@
 .bg-body-secondary {
   background-color: white !important;
 }
-.highlight{
+.highlight {
   color: red;
+}
+.main__container .p-4 {
+  box-shadow: 0 4px 8px gainsboro;
 }

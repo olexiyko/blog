@@ -1,4 +1,31 @@
-.login__container{
-    max-width: 600px;
-    margin: 0 auto;
+.login__container {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px gainsboro;
+  padding: 20px;
+}
+
+.login__buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login-btn {
+  margin-right: 20px;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.login-text {
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+#signUp-btn {
+  display: inline-block;
 }

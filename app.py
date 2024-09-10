@@ -181,6 +181,17 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/delete-user/<int:id>")
+def delete_user(id):
+    user = User.query.get_or_404(id)
+    try:
+        db.session.delete(user)
+        db.session.commit()
+        return redirect("/")
+    except:
+        return "There was a problem deleting the user."
+
+
 @app.route("/logout")
 def logout():
     session.pop("user_id", None)
@@ -188,8 +199,8 @@ def logout():
     return redirect("/login")
 
 
-@app.route("/success")
-def success():
+@app.route("/users-list")
+def users_list():
     if "user_id" not in session:
         return redirect("/login")
 
@@ -200,6 +211,23 @@ def success():
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
+
+
+@app.route("/change-password", methods=["POST", "GET"])
+def change_password():
+    if request.method == "POST":
+        old_password = request.form.get("old_password")
+        new_password = request.form.get("new_password")
+
+        user = User.query.filter_by(id=session.get("user_id")).first()
+
+        if user and user.password == old_password:
+            user.password = new_password
+            db.session.commit()
+            return redirect("/profile")
+
+        flash("Old password is incorrect", "danger")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
